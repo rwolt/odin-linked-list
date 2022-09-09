@@ -95,7 +95,20 @@ class LinkedList {
     return null;
   };
 
-  toString = () => {};
+  toString = () => {
+    //Iterate over the list, return a graphic representation if the node has a next value, else return 'null'
+    let stringModel = "";
+    let tmp = this.head;
+    while (tmp) {
+      if (tmp.nextNode) {
+        stringModel += `( ${tmp.value} ) -> `;
+      } else {
+        stringModel += `( ${tmp.value} ) -> null`;
+      }
+      tmp = tmp.nextNode;
+    }
+    return stringModel;
+  };
 }
 
 class Node {
@@ -118,6 +131,7 @@ list.append("fourth");
 // console.log(list.contains("first"));
 // console.log(list.contains("fourth"));
 // console.log(list.contains(1));
-console.log(list.find("fifth"));
-console.log(list.getHead());
-console.log(list.getTail());
+// console.log(list.find("fifth"));
+// console.log(list.getHead());
+// console.log(list.getTail());
+console.log(list.toString());
