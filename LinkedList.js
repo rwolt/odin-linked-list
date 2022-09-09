@@ -36,6 +36,17 @@ class LinkedList {
     }
     return count;
   };
+
+  at = (index) => {
+    //Iterate through the list until reaching the index, beginning from 0
+    let tmp = this.head;
+    let current = 0;
+    while (current < index) {
+      tmp = tmp.nextNode;
+      current += 1;
+    }
+    return tmp;
+  };
 }
 
 class Node {
@@ -49,6 +60,8 @@ let list = new LinkedList();
 list.prepend("first");
 list.append("second");
 list.append("third");
+list.append("fourth");
 // console.log(list.head);
 // console.log(list.tail);
-console.log(list.size());
+// console.log(list.size());
+console.log(list.at(3));
