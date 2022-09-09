@@ -47,6 +47,19 @@ class LinkedList {
     }
     return tmp;
   };
+
+  pop = () => {
+    //Iterate over the list, keep track of current and previous. Point the second to last element to null.
+    let current = this.head;
+    let prev;
+    while (current.nextNode) {
+      prev = current;
+      current = current.nextNode;
+    }
+    prev.nextNode = null;
+    this.tail = prev;
+    return current;
+  };
 }
 
 class Node {
@@ -64,4 +77,5 @@ list.append("fourth");
 // console.log(list.head);
 // console.log(list.tail);
 // console.log(list.size());
-console.log(list.at(3));
+console.log(list.pop());
+console.log(list.size());
