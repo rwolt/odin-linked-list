@@ -37,6 +37,14 @@ class LinkedList {
     return count;
   };
 
+  getHead = () => {
+    return this.head;
+  };
+
+  getTail = () => {
+    return this.tail;
+  };
+
   at = (index) => {
     //Iterate through the list until reaching the index, beginning from 0
     let tmp = this.head;
@@ -86,6 +94,8 @@ class LinkedList {
     }
     return null;
   };
+
+  toString = () => {};
 }
 
 class Node {
@@ -109,3 +119,5 @@ list.append("fourth");
 // console.log(list.contains("fourth"));
 // console.log(list.contains(1));
 console.log(list.find("fifth"));
+console.log(list.getHead());
+console.log(list.getTail());
