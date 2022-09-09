@@ -60,6 +60,18 @@ class LinkedList {
     this.tail = prev;
     return current;
   };
+
+  contains = (value) => {
+    //Iterate over the list, return true if value of node matches value argument
+    let tmp = this.head;
+    while (tmp) {
+      if (tmp.value === value) {
+        return true;
+      }
+      tmp = tmp.nextNode;
+    }
+    return false;
+  };
 }
 
 class Node {
@@ -77,5 +89,8 @@ list.append("fourth");
 // console.log(list.head);
 // console.log(list.tail);
 // console.log(list.size());
-console.log(list.pop());
+// console.log(list.pop());
 console.log(list.size());
+console.log(list.contains("first"));
+console.log(list.contains("fourth"));
+console.log(list.contains(1));
