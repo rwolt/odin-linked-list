@@ -72,6 +72,20 @@ class LinkedList {
     }
     return false;
   };
+
+  find = (value) => {
+    //Iterate over the list, keeping track of the index. Return the current index if value is a match.
+    let tmp = this.head;
+    let current = 0;
+    while (tmp) {
+      if (tmp.value === value) {
+        return current;
+      }
+      current += 1;
+      tmp = tmp.nextNode;
+    }
+    return null;
+  };
 }
 
 class Node {
@@ -90,7 +104,8 @@ list.append("fourth");
 // console.log(list.tail);
 // console.log(list.size());
 // console.log(list.pop());
-console.log(list.size());
-console.log(list.contains("first"));
-console.log(list.contains("fourth"));
-console.log(list.contains(1));
+// console.log(list.size());
+// console.log(list.contains("first"));
+// console.log(list.contains("fourth"));
+// console.log(list.contains(1));
+console.log(list.find("fifth"));
