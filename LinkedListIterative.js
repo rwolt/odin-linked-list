@@ -117,21 +117,3 @@ class Node {
     this.nextNode = nextNode;
   }
 }
-
-let list = new LinkedList();
-list.prepend("first");
-list.append("second");
-list.append("third");
-list.append("fourth");
-// console.log(list.head);
-// console.log(list.tail);
-// console.log(list.size());
-// console.log(list.pop());
-// console.log(list.size());
-// console.log(list.contains("first"));
-// console.log(list.contains("fourth"));
-// console.log(list.contains(1));
-// console.log(list.find("fifth"));
-// console.log(list.getHead());
-// console.log(list.getTail());
-console.log(list.toString());
